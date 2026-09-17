@@ -3,6 +3,22 @@
   publish = "dist"
   functions = "netlify/functions"
 
+[functions]
+  # pdfjs-dist lädt seine Worker-Datei zur Laufzeit dynamisch nach (new URL(...)
+  # o.ä.) — weder esbuild noch die Node-File-Trace-Analyse von Netlifys
+  # Bundler erkennen das automatisch, external_node_modules half hier
+  # nachweislich nicht (mit @netlify/zip-it-and-ship-it direkt gegengetestet,
+  # ohne echtes Deployment). included_files mit Glob statt festem Pfad ist
+  # robuster gegen künftige Umstrukturierungen innerhalb des Pakets.
+  included_files = ["node_modules/pdfjs-dist/**/pdf.worker.mjs"]
+
+[dev]
+  command = "npm run dev"
+  targetPort = 5173
+  port = 8888
+  publish = "dist"
+  framework = "vite"
+
 # Serverless Functions bleiben im Code unter /api/* ansprechbar; Netlify legt
 # sie intern unter /.netlify/functions/* ab.
 [[redirects]]

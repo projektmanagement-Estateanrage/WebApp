@@ -18,5 +18,5 @@
     "erasableSyntaxOnly": true,
     "noFallthroughCasesInSwitch": true
   },
-  "include": ["src/server", "scripts"]
+  "include": ["src/server", "scripts", "netlify/functions"]
 }

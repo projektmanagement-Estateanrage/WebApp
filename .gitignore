@@ -29,3 +29,7 @@ dist-ssr
 # Spike-/Debug-Artefakte: Rohtext und Modellantworten aus echten Kundenlisten,
 # gehören nicht ins Repo.
 out/
+
+# Local Netlify folder
+.netlify
+deno.lock

@@ -12,6 +12,7 @@ import {
   summeKaufpreise,
   vergleicheMitToleranz,
 } from '../lib/zahlen'
+import { ImportBereich } from './ImportBereich'
 import type { Einheit, EinheitStatus, EinheitTyp, Projekt } from '../types/database'
 
 const TYPEN: EinheitTyp[] = ['wohnung', 'stellplatz', 'garage', 'gewerbe', 'sonstiges']
@@ -411,6 +412,8 @@ export function ProjektDetail() {
           )}
         </div>
       </div>
+
+      <ImportBereich projektId={projekt.id} bestehendeAnzahl={einheiten.length} onUebernommen={laden} />
 
       <div className="mb-4 flex flex-wrap items-center justify-between gap-3">
         <div className="flex flex-wrap gap-2">
