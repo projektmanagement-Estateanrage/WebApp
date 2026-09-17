@@ -1,0 +1,22 @@
+{
+  "aggregate": {
+    "anzahlWohnungen": 14,
+    "wohnflaecheGesamtM2": 1038.55,
+    "kaufpreisGesamt": 5625500,
+    "typAnzahl": { "stellplatz": 8, "garage": 0, "gewerbe": 1, "sonstiges": 1 }
+  },
+  "summenZeileErwartet": { "flaeche": 1038.55, "kaufpreis": 5625500 },
+  "einheiten": [
+    { "bezeichnung": "W02", "status": "verkauft" },
+    { "bezeichnung": "W05", "status": "verkauft" },
+    { "bezeichnung": "W09", "status": "verkauft" },
+    { "bezeichnung": "W13", "status": "verkauft" },
+    { "bezeichnung": "TG01", "typ": "stellplatz", "status": "verkauft" },
+    { "bezeichnung": "TG05", "typ": "stellplatz", "status": "verkauft" },
+    { "bezeichnung": "TG08", "typ": "stellplatz", "status": "verkauft" },
+    { "bezeichnung": "W03", "status": "reserviert" },
+    { "bezeichnung": "W08", "status": "reserviert" },
+    { "bezeichnung": "W14", "status": "reserviert" },
+    { "bezeichnung": "TG03", "typ": "stellplatz", "status": "reserviert" }
+  ]
+}

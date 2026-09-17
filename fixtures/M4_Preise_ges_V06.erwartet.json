@@ -1,0 +1,29 @@
+{
+  "aggregate": {
+    "anzahlWohnungen": 16,
+    "wohnflaecheGesamtM2": 991.59,
+    "kaufpreisGesamt": null,
+    "typAnzahl": { "stellplatz": 0, "garage": 0, "gewerbe": 0, "sonstiges": 0 }
+  },
+  "summenZeileErwartet": null,
+  "einheiten": [
+    { "bezeichnung": "W01", "typ": "wohnung", "etage": "2.OG", "zimmer": "2", "groesse": "43,10 qm", "kaufpreis": 295225, "status": "reserviert" },
+    { "bezeichnung": "W02", "typ": "wohnung", "etage": "2.OG", "zimmer": "4", "groesse": "91,91 qm", "kaufpreis": 629607, "status": "frei" },
+    { "bezeichnung": "W03", "typ": "wohnung", "etage": "2.OG", "zimmer": "1", "groesse": "37,76 qm", "kaufpreis": null, "status": "verkauft" },
+    { "bezeichnung": "W04", "typ": "wohnung", "etage": "2.OG", "zimmer": "3", "groesse": "75,60 qm", "kaufpreis": null, "status": "verkauft" },
+    { "bezeichnung": "W05", "typ": "wohnung", "etage": "3.OG", "zimmer": "2", "groesse": "43,10 qm", "kaufpreis": 299535, "status": "reserviert" },
+    { "bezeichnung": "W06", "typ": "wohnung", "etage": "3.OG", "zimmer": "4", "groesse": "91,91 qm", "kaufpreis": 638799, "status": "frei" },
+    { "bezeichnung": "W07", "typ": "wohnung", "etage": "3.OG", "zimmer": "1", "groesse": "37,76 qm", "kaufpreis": 262442, "status": "frei" },
+    { "bezeichnung": "W08", "typ": "wohnung", "etage": "3.OG", "zimmer": "3", "groesse": "75,60 qm", "kaufpreis": 525434, "status": "frei" },
+    { "bezeichnung": "W09", "typ": "wohnung", "etage": "4.OG", "zimmer": "2", "groesse": "43,10 qm", "kaufpreis": null, "status": "verkauft" },
+    { "bezeichnung": "W10", "typ": "wohnung", "etage": "4.OG", "zimmer": "4", "groesse": "91,91 qm", "kaufpreis": 721521, "status": "frei" },
+    { "bezeichnung": "W11", "typ": "wohnung", "etage": "4.OG", "zimmer": "1", "groesse": "37,76 qm", "kaufpreis": null, "status": "verkauft" },
+    { "bezeichnung": "W12", "typ": "wohnung", "etage": "4.OG", "zimmer": "3", "groesse": "75,60 qm", "kaufpreis": null, "status": "verkauft" },
+    { "bezeichnung": "W13", "typ": "wohnung", "etage": "5.OG", "zimmer": "2", "groesse": "43,10 qm", "kaufpreis": null, "status": "verkauft" },
+    { "bezeichnung": "W14", "typ": "wohnung", "etage": "5.OG", "zimmer": "4", "groesse": "91,91 qm", "kaufpreis": 776669, "status": "frei" },
+    { "bezeichnung": "W15", "typ": "wohnung", "etage": "5.OG", "zimmer": "1", "groesse": "37,76 qm", "kaufpreis": 319085, "status": "frei" },
+    { "bezeichnung": "W16", "typ": "wohnung", "etage": "5.OG", "zimmer": "2", "groesse": "73,71 qm", "kaufpreis": 674465, "status": "frei" }
+  ],
+  "verboteneBezeichnungen": ["75.000", "52.000", "20.000", "Stellplatz", "Tiefgaragenstellplatz", "Erstanmietrecht"],
+  "hinweiseErwartetSubstrings": ["75.000", "52.000", "20.000"]
+}
