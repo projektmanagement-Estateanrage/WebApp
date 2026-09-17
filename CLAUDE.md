@@ -33,6 +33,25 @@ mehrspaltigen Exposés.
 - `einheiten`: `kaufpreis` ist **nullable** — verkaufte Einheiten haben oft keinen
   Preis mehr in der Quelle, `0` wäre eine Falschaussage.
 - `importe`: Rohtext + Modellantwort + Hinweise pro Upload, für Nachvollziehbarkeit.
+  Plus `status` (`wird_geparst`/`wird_erkannt`/`fertig`/`fehler`) und `fehler`,
+  über die die Oberfläche den Fortschritt einer Background Function abfragt.
+
+### Storage-Bucket "importe"
+
+Wird **im Dashboard** angelegt (Storage → New bucket), nicht per SQL-Migration
+— `insert into storage.buckets` scheitert dort an fehlenden Rechten und reißt
+die ganze Migration zurück. Einstellungen:
+
+- Name: `importe`
+- Privat (kein öffentlicher Zugriff)
+- Erlaubte MIME-Typen: `application/pdf`,
+  `application/vnd.openxmlformats-officedocument.spreadsheetml.sheet` (.xlsx),
+  `application/vnd.ms-excel` (.xls/.xlsm)
+- Größenlimit: 20 MB (M4 hat ~4 MB, Puffer für größere Listen)
+
+Die RLS-Policies auf `storage.objects` (authentifizierte Uploads/Downloads für
+diesen Bucket) kommen weiterhin aus der Migration — die setzen nicht voraus,
+dass der Bucket zum Migrationszeitpunkt schon existiert.
 
 ## Extraktionsregeln (System-Prompt + Testfälle)
 
