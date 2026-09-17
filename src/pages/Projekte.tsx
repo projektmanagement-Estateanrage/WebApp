@@ -47,7 +47,7 @@ export function Projekte() {
 
   return (
     <div className="mx-auto max-w-3xl p-8">
-      <div className="mb-6 flex items-center justify-between">
+      <div className="mb-6 flex flex-wrap items-center justify-between gap-3">
         <h1 className="text-xl font-semibold text-slate-900">Projekte</h1>
         <div className="flex gap-2">
           <button

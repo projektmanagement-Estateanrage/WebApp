@@ -87,7 +87,7 @@ export function ProjektDetail() {
 
       {error && <p className="mb-4 text-sm text-red-600">{error}</p>}
 
-      <div className="mb-4 flex items-center justify-between">
+      <div className="mb-4 flex flex-wrap items-center justify-between gap-3">
         <div className="text-sm text-slate-600">
           {einheiten.length} Einheiten · Kaufpreissumme {formatEuro(kaufpreisSumme)}
           {projekt.kontrolle_kaufpreis !== null && (

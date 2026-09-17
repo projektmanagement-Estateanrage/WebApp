@@ -12,6 +12,13 @@ function RequireAuth({ children }: { children: React.ReactNode }) {
   return <>{children}</>
 }
 
+function LoginRoute() {
+  const { session, loading } = useAuth()
+  if (loading) return <p className="p-8 text-sm text-slate-500">Lädt…</p>
+  if (session) return <Navigate to="/projekte" replace />
+  return <Login />
+}
+
 function SetupHinweis() {
   return (
     <div className="flex min-h-screen items-center justify-center bg-slate-50 p-8">
@@ -32,7 +39,7 @@ export default function App() {
 
   return (
     <Routes>
-      <Route path="/login" element={<Login />} />
+      <Route path="/login" element={<LoginRoute />} />
       <Route
         path="/projekte"
         element={
